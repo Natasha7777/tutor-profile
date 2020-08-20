@@ -1,0 +1,686 @@
+<html>
+<head>
+
+<TITLE>Перші кроки - Порція перша, інструментарій.</TITLE>      
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+<table>
+<tr><td width="600">
+
+<h4>Учебник по формам
+</h4>
+<b>Урок 2</b>
+<br><br>
+
+С этого момента я не буду приводить код нашего документа полностью. Однако, вы должны понимать, что приводимый  далее код вы должны вставлять между &lt;FORM&gt; и &lt;/FORM&gt;.
+<br><br>
+Итак, наиболее распространенный тип (TYPE) поля &lt;INPUT&gt; это текстовой (TEXT).
+<br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS">
+</FORM>
+Вот такое оно поле для ввода текста (одной строки текста).
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Вся информация, которую мы вводим, должна иметь имя (NAME).
+</font>
+<br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT <b>NAME="ADDRESS"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS">
+</FORM>
+Визуально это никак не отображается.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Когда ваш посетитель напечатает в этом поле свой адрес (например, 1313 Улица Пересмешника), то он становится  выводимым <i>значением</i>, которое будет связано с ADDRESS (адресом), и в результате после расшифровки данных почтовой программой или расшифровщиком данных формы  вы получите: "АДРЕС (ADDRESS)=1313 Улица Пересмешника".
+
+
+Мы можем сами ввести значение (VALUE) для поля формы:
+</font>
+<br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" <b>VALUE="44 Cherry St"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St">
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Это значит, что ADDRESS будет связан со значением "44 Cherry St", пока пользователь (ваш посетитель) не изменить его на свое. 
+<br><br>
+Кстати, кавычки ставьте обязательно, не пропускайте их, не забывайте, чтобы форма корректно работала и отображалась.
+<br><br>
+Мы также можем задать свой размер для текстового поля:
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" <b>SIZE="10"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" SIZE="10">
+</FORM><br>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" <b>SIZE="20"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" SIZE="20">
+</FORM><br>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" <b>SIZE="30"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" VALUE="44 Cherry St" SIZE="30">
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+По умолчанию размер текстового поля равен 20-ти. По умолчанию - это значит, что броузер так отобразит какой-то элемент, даже если вы не задали специфических значений для него (т.е. если вы не напишите SIZE="20" для поля формы, то его размер все равно будет 20-ть, т.к. он такой по умолчанию).
+<br><br>
+Давайте теперь удалим VALUE="44 Cherry St". И введем размер для поля равный 30-ти.
+</font>
+<br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" <b>SIZE="30"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" SIZE="30">
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Если мы хотим, то мы можем задать максимальное количество символов, которое ваш посетитель может ввести в текстовое поле.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=TEXT NAME="ADDRESS" SIZE="30" <b>MAXLENGTH="10"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=TEXT NAME="ADDRESS" SIZE="30" MAXLENGTH="10">
+</FORM>
+Попробуйте напечатать в этом поле больше десяти символов - у вас ничего не получится! :)
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Зачем нам нужна такая возможность ограничивать нашего посетителя? А представьте, что вдруг кому-то взбредет хулиганства ради послать вам текст всей Библии (<i>примечание переводчика: или всю "Войну и Мир" Толстого</i> :). То-то вы удивитесь, когда будете час-другой почту скачивать.
+
+<br><br>
+Очень схоже с текстовым полем (TYPE=TEXT) поле для ввода пароля (TYPE=PASSWORD). Оно фактически такое же, только не отображает вводимые вами символы, а маркирует их звездочками (***). Броузер перешлет вам то, что вводил пользователь (ввиде нормальных символов), просто окружающим не будет видно, что вводил ваш посетитель в поле формы (<i>примечание переводчика: весьма полезная вещь, если ваш посетитель сидит в интернет-кафе или офисе, т.е. местах, где посторонний человек может подсмотреть вводимую информацию</i>).
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT <b>TYPE=PASSWORD</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=PASSWORD>
+</FORM>
+Попробуйте напечатать в этом поле что-нибудь.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Итак, вспомним, что каждое поле (INPUT) должно иметь имя (NAME):
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=PASSWORD <b>NAME="USER PASSWORD"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=PASSWORD NAME="USER PASSWORD">
+</FORM>
+
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+
+SIZE, VALUE, и MAXLENGTH - эти атрибуты также работают с полем для ввода пароля, как и с текстовым полем. <br><br>
+Кстати, надеюсь вы знаете, что теги (&lt;INPUT&gt;) говорят броузеру что-то сделать. А атрибуты тегов (TYPE, NAME, MAXLENGTH и т.д.) говорят  броузеру, как это сделать.
+<br><br>
+Далее мы с вами научимся создавать "переключатели" (Radio Buttons) и "флажки" (Check Boxes). Переключатели позволяют пользователю выбрать одну из нескольких опций (параметров). Флажки позволяют выбрать пользователю одну, несколько или все опции.
+
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT <b>TYPE=RADIO NAME="BEST FRIEND"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RADIO NAME="BEST FRIEND">
+</FORM>
+Это переключатель.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+</div>
+
+Добавим еще парочку переключателей.
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;<br>
+<b>&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;</b>
+<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RADIO NAME="BEST FRIEND">
+<INPUT TYPE=RADIO NAME="BEST FRIEND">
+<INPUT TYPE=RADIO NAME="BEST FRIEND">
+</FORM>
+Можно по ним пощелкать. Больше одного выбрать не получится.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+Хм... Думаю, что лучше их разнести по разным строкам:
+
+
+
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;<b>&lt;BR&gt;</b><br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;<b>&lt;BR&gt;</b><br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND"&gt;<b>&lt;P&gt;</b><br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RADIO NAME="BEST FRIEND"><br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND"><br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND">
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+Заметьте, все переключатели имеют одно и тоже имя (NAME). Почему? Это вам станет ясно чуть позднее.
+<br><br>
+Каждому переключателю должно быть задано свое собственное значение
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" <b>VALUE="Ed"</b>&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" <b>VALUE="Rick"</b>&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" <b>VALUE="Tom"</b>&gt;&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Ed"><br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Rick"><br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Tom">
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+Теперь зададим описание каждому переключателю:
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Ed"&gt; <b>Эд Холлеран</b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Rick"&gt; <b>Рик Вайнберг</b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Tom"&gt; <b>Том Студд</b>&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Ed"> Эд Холлеран<br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Rick"> Рик Вайнберг<br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Tom"> Том Студд
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+Вы можете видоизменить описания любыми знакомыми вам html-тегами (<i>прим. переводчика: понятно, что html-тегами, которые мы применяем к тексту, т.е. изменить цвет описаний, размер, шрифт и т.д.</i>).
+
+<br><br>
+
+Вот фактически наша форма с опросом (где мы используем переключатели) и доделана. Чтобы было понятнее пользователю: мы можем приписать какой-либо вопрос к форме (например, мы хотим опросить знакомых, кто их лучший друг из этих трех молодых людей). Кроме того при помощи атрибута CHECKED мы можем выбрать, какая опция будет выбрана по умолчанию (пока пользователь не выберет ту опцию, которую считает нужной).
+
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>Кто ваш лучший друг?&lt;BR&gt;</b><br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Ed" <b>CHECKED</b>&gt; Эд Холлеран&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Rick"&gt; Рик Вайнберг&lt;BR&gt;<br>
+&lt;INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Tom"&gt; Том Студд&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+Кто ваш лучший друг?<br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Ed" CHECKED> Эд Холлеран<br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Rick"> Рик Вайнберг<br>
+<INPUT TYPE=RADIO NAME="BEST FRIEND" VALUE="Tom"> Том Студд
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+Еще раз повторюсь, пользователь при данном типе полей формы (переключателей) может выбрать только одну опцию. Выбор вашего посетителя будет переслан вам как: BEST FRIEND=Ed (или другой молодый человек, смотря кого выберут).
+<br><br>
+Теперь мы с вами будем учиться создавать форму с "флажками". Создание такой формы аналогично созданию формы с "переключателями".
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;<b>INPUT TYPE=CHECKBOX NAME="Ed"</b>&gt;<br><br>
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=CHECKBOX NAME="Ed">
+</FORM>
+Щелкните, чтобы выбрать флажок, еще раз щелкните - чтобы убрать выделение.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+
+Добавим еще несколько флажков. Каждому зададим свое имя  (NAME). Если хотите, то вы можете разнести флажки по разным строкам.
+
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=CHECKBOX NAME="Ed"&gt;<b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Rick"&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Tom"&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="BM"&gt;&lt;P&gt;</b><br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=CHECKBOX NAME="Ed"><BR>
+<INPUT TYPE=CHECKBOX NAME="Rick"><BR>
+<INPUT TYPE=CHECKBOX NAME="Tom"><BR>
+<INPUT TYPE=CHECKBOX NAME="BM">
+</FORM>Пощелкайте по флажкам, вы можете выбрать сразу несколько из них.
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+</div>
+
+Всем флажкам должно быть задано одинаковое значение:
+
+
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=CHECKBOX NAME="Ed" <b>VALUE="YES"</b>&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Rick" <b>VALUE="YES"</b>&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Tom" <b>VALUE="YES"</b>&gt;&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="BM" <b>VALUE="YES"</b>&gt;&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=CHECKBOX NAME="Ed" VALUE="YES"><BR>
+<INPUT TYPE=CHECKBOX NAME="Rick" VALUE="YES"><BR>
+<INPUT TYPE=CHECKBOX NAME="Tom" VALUE="YES"><BR>
+<INPUT TYPE=CHECKBOX NAME="BM" VALUE="YES">
+</FORM>
+
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Итак заметьте для "флажков" имя (NAME) разное, а значение (VALUE) для всех одинаковое, а для "переключателей" наооборот (NAME - одинаковое, а VALUE разное). Не переживайте, когда я долгими ночами изучал спецификацию по html, меня тоже этот момент приводил в замешательство, но потом в голове все разложилось по полочкам, и теперь я умный :).
+
+<br><br>
+Но не будем отвлекаться, продолжим нашу работу: напишем к каждому флажку описание.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=CHECKBOX NAME="Ed"  VALUE="YES"&gt; <b>Эд Холлеран</b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Rick"  VALUE="YES"&gt; <b>Рик Вайнберг</b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Tom"  VALUE="YES"&gt; <b>Том Студд</b>&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="BM"  VALUE="YES"&gt; <b>Бургермастер Мастербургер</b>&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=CHECKBOX NAME="Ed" VALUE="YES"> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Tom" VALUE="YES"> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="BM" VALUE="YES"> Бургермастер Мастербургер
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+                             
+И наконец, мы добавляем ваш вопрос к форме. А также можем отметить какие флажки будут выбраны по умолчанию (пока ваш посетитель не выберет другие), но это на ваше усмотрение, конечно.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>Кто из этих парней ваш друг?&lt;BR&gt;</b><br>
+&lt;INPUT TYPE=CHECKBOX NAME="Ed"  VALUE="YES" <b>CHECKED</b>&gt; Эд Холлеран&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Rick"  VALUE="YES"&gt; Рик Вайнберг&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="Tom"  VALUE="YES" <b>CHECKED</b>&gt; Том Студд&lt;BR&gt;<br>
+&lt;INPUT TYPE=CHECKBOX NAME="BM"  VALUE="YES"&gt; Бургермастер Мастербургер&lt;P&gt;<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+Кто из этих парней ваш друг?<br>
+<INPUT TYPE=CHECKBOX NAME="Ed" VALUE="YES" CHECKED> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Tom" VALUE="YES" CHECKED> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="BM" VALUE="YES"> Бургермастер Мастербургер
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Ваш посетитель может выбрать одно, второе, или ничего, или сразу все. Выбор вашего посетителя вы получите в следующем виде:
+<br><br>
+Ed=YES<br>
+Tom=YES<br><br>
+
+Если посетитель ничего не выберет, то ничего вам и не перешлется по почте (<i>прим. переводчика: надеюсь вы еще помните, что мы создаем форму, результаты который отправляются к вам на е-майл</i>).
+
+<br><br>
+Вам может прийти на ум вопрос, а что если вы вдруг захотите узнать три разные вещи об этих парнях (задать три вопроса о них вашим посетителям). Что тогда? Хорошо, мистер Умные Штанишки, я сделаю это для вас, я вам покажу, что тогда... 
+</font>
+<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<CENTER>
+<TABLE WIDTH=600 BORDER=1 CELLSPACING=1><TR>
+
+<TD WIDTH=199 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кто из этих парней ваш друг?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Ed" VALUE="YES"> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Tom" VALUE="YES"> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..BM" VALUE="YES"> Бургермастер<P>
+</TD>
+
+<TD WIDTH=200 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кому бы вы не побоялись одолжить деньжат?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Ed" VALUE="YES"> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Tom" VALUE="YES"> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...BM" VALUE="YES"> Бургермастер<P>
+</TD>
+
+<TD WIDTH=199 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кому бы из этих ребят вы бы могли доверить свою сестру?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Ed" VALUE="YES"> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Tom" VALUE="YES"> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...BM" VALUE="YES"> Бургермастер<P>
+</TD>
+
+</TR></TABLE>
+</CENTER>
+</FORM>
+
+<font face="times new roman">
+Во-первых, как я уже говорил, имена (NAME) для всех полей должны быть разные. Конечно, есть соблазн использовать одинаковые имена для каждого вопроса, чтобы не было путаницы. Никогда не поддавайтесь такому соблазну, ваш компьютер не поймет вас, и ваш броузер тоже вас не поймет, и ваш cgi-скрипт (если вы его будете использовать) вас тоже совсем не поймет. Зачем нам такие дурацкие расклады? Нет, нам этого не нужно.
+
+<BR><BR>
+
+Теперь же, как обещал, я приведу html-код для этих трех вопросов. Теги относящиеся к таблице, в которой размещена форма, выделены зеленым. То, как мы располагаем форму в таблице, не влияет на то, как форма работает (<i>примечание переводчика: если вы не знаете, как вводить таблицы в ваш документ, то изучить это вам поможет учебник по html "<a href="content2.html">Першi кроки</a>"</i>).
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<FONT COLOR="#008000">&lt;CENTER&gt;</FONT><BR>
+<FONT COLOR="#008000">&lt;TABLE WIDTH=600 BORDER=1 CELLSPACING=1&gt;&lt;TR&gt;</FONT><P>
+
+<FONT COLOR="#008000">&lt;TD WIDTH=199&gt;</FONT><BR>
+Кто из этих парней ваш друг?&lt;BR&gt;<BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Friend?..Ed" VALUE="YES"&gt; Эд Холлеран&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Friend?..Rick" VALUE="YES"&gt; Рик Вайнберг&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Friend?..Tom" VALUE="YES"&gt; Том Студд&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Friend?..BM" VALUE="YES"&gt; Бургермастер&lt;P&gt;</NOBR><BR>
+<FONT COLOR="#008000">&lt;/TD&gt;</FONT><P>
+
+<FONT COLOR="#008000">&lt;TD WIDTH=200&gt;</FONT><BR>
+Кому бы вы не побоялись одолжить деньжат?&lt;BR&gt;<BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Lend money?...Ed" VALUE="YES"&gt; Эд Холлеран&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Lend money?...Rick" VALUE="YES"&gt; Рик Вайнберг&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Lend money?...Tom" VALUE="YES"&gt; Том Студд&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Lend money?...BM" VALUE="YES"&gt; Бургермастер&lt;P&gt;</NOBR><BR>
+<FONT COLOR="#008000">&lt;/TD&gt;</FONT><P>
+
+<FONT COLOR="#008000">&lt;TD WIDTH=199&gt;</FONT><BR>
+Кому бы из этих ребят вы бы могли доверить свою сестру?&lt;BR&gt;<BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Date sister?...Ed" VALUE="YES"&gt; Эд Холлеран&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Date sister?...Rick" VALUE="YES"&gt; Рик Вайнберг&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Date sister?...Tom" VALUE="YES"&gt; Том Студд&lt;BR&gt;</NOBR><BR>
+<NOBR>&lt;INPUT TYPE=CHECKBOX NAME="Date sister?...BM" VALUE="YES"&gt; Бургермастер&lt;P&gt;</NOBR><BR>
+<FONT COLOR="#008000">&lt;/TD&gt;</FONT><P>
+
+<FONT COLOR="#008000">&lt;/TR&gt;&lt;/TABLE&gt;</FONT><BR>
+<FONT COLOR="#008000">&lt;/CENTER&gt;</FONT><BR>
+
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Предположим, что ваш посетитель сделал такой выбор:
+</font>
+<br><br>
+
+<FORM METHOD=POST ACTION="http://www-1.gsb.columbia.edu/cis/webtutor/forms/xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<CENTER>
+<TABLE WIDTH=600 BORDER=1 CELLSPACING=1><TR>
+
+<TD WIDTH=199 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кто из этих парней ваш друг?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Ed" VALUE="YES" CHECKED> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Rick" VALUE="YES" CHECKED> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..Tom" VALUE="YES" CHECKED> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Friend?..BM" VALUE="YES"> Бургермастер<P>
+</TD>
+
+<TD WIDTH=200 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кому бы вы не побоялись одолжить деньжат?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Ed" VALUE="YES"> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Rick" VALUE="YES"> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...Tom" VALUE="YES" CHECKED> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Lend money?...BM" VALUE="YES" CHECKED> Бургермастер<P>
+</TD>
+
+<TD WIDTH=199 valign="top"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+Кому бы из этих ребят вы бы могли доверить свою сестру?<BR><BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Ed" VALUE="YES" CHECKED> Эд Холлеран<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Rick" VALUE="YES" CHECKED> Рик Вайнберг<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...Tom" VALUE="YES"> Том Студд<BR>
+<INPUT TYPE=CHECKBOX NAME="Date sister?...BM" VALUE="YES" CHECKED> Бургермастер<P>
+</TD>
+
+</TR></TABLE>
+</CENTER>
+</FORM>
+<font face="times new roman">
+А это значит, что на почту вам придет следующая информация:
+<br><br>
+Friend?..Ed=YES<br>
+Friend?..Rick=YES<br>
+Friend?..Tom=YES<br>
+Lend money?...Tom=YES<br>
+Lend money?...BM=YES<br>
+Date sister?...Ed=YES<br>
+Date sister?...Tom=YES<br>
+Date sister?...BM=YES
+<br><br>
+Чудово! Тепер ми все про всiх знаємо.
+
+<br><br>
+<center><a href="1stepForm.html">Назад</a> | <a href="3stepForm.html">Наступна частина</a></center></font>
+<font>
+</td></tr></table>
+</body>
+</html>

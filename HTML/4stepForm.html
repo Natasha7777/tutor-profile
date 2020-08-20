@@ -1,0 +1,206 @@
+<html>
+<head>
+
+<TITLE>Перші кроки - Порція перша, інструментарій.</TITLE>      
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+<table>
+<tr><td width="600">
+<h4>Учебник по формам
+</h4>
+<b>Урок 4</b>
+<br><br>
+
+Существуют так же поля, которые не отображаются на экране монитора. Это спрятанные (HIDDEN) поля.</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>&lt;INPUT TYPE=HIDDEN NAME="FORMNAME" VALUE="Friend Form 1"&gt;</b>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Содержание поля HIDDEN посылается вам в виде пары name/value (имя/значение)  вместе с остальной информацией формы, вашему же посетителю эти поля, когда он заполняет форму, не видны.
+
+<br><br>
+Давайте представим, что вы работаете в компании, которая хочет узнать как обстоят дела с их новым продкутом. Для этого вы создаете форму-опрос, где присутствуют разные стандартные поля типа: имя, фамилия, возможность выбрать ("флажки") нравится продукт клиенту или нет и т.д. Но есть небольшая проблема. Вы размещаете шесть чуть видоизмененных вариантов формы на шести разных сайтах фирм, которые распространяют ваш новый продукт. И вам нужно знать, что и откуда пришло. Что же делать?
+<br><br>
+Вот тут вам и помогут скрытые поля формы.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=HIDDEN NAME="FORMNAME" <b>VALUE="Version 1"</b>&gt; ...для первой версии<br>
+&lt;INPUT TYPE=HIDDEN NAME="FORMNAME" <b>VALUE="Version 2"</b>&gt; ...для второй версии<br>
+&lt;INPUT TYPE=HIDDEN NAME="FORMNAME"<b> VALUE="Version 3"</b>&gt; ...для третьей версии
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+И так далее (для четвертого, пятого, шестого)...
+
+<br><br>
+
+Не важно, какие значения (названия) вы зададите для пары name/value. Я использовал "FORMNAME" потому что мне было лениво выдумывать что-то оригинальное и печатать это каждый раз. Можете напечатать хоть так:
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=HIDDEN <b>NAME="E" VALUE="Mc^2"</b>&gt; ...Результат вам придет ввиде: E=Mc^2
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Скрытые поля полезны, как в работе с e-mail формами, так и с формами, которые обращаются в cgi-скриптам. Скрытые поля могут говорить скриптам, кто вы, куда отсылать ваш запрос, и т.д.
+
+<br><br>
+
+Теперь у нас по плану кнопки отправки (SUBMIT) и сброса (RESET) информации.
+
+<br><br>
+Ввести их в ваш документ очень легко: 
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>&lt;INPUT TYPE=SUBMIT&gt;</b><br><br>
+<FORM METHOD=POST ACTION="mailto:xxx@xxx.xxx" ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=SUBMIT>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+При нажатии на эту кнопку данные из формы отсылаются к вам.
+ <br><br>
+А при нажатии на RESET, данные из формы сбрасываются (стираются).
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>&lt;INPUT TYPE=RESET&gt;</b><br><br>
+<FORM METHOD=POST ACTION="mailto:xxx@xxx.xxx" ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=RESET>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+ Разумеется, мы легко можем изменить надписи на кнопках:
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;INPUT TYPE=SUBMIT <b>VALUE="Отослать данные из формы к Джо"</b>&gt;<br>
+&lt;INPUT TYPE=RESET <b>VALUE="Очистить форму"</b>&gt;<br>
+<br>
+<FORM METHOD=POST ACTION="mailto:xxx@xxx.xxx" ENCTYPE="application/x-www-form-urlencoded">
+<INPUT TYPE=SUBMIT VALUE="Отослать данные из формы к Джо"><BR>
+<INPUT TYPE=RESET VALUE="Очистить форму"><P>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Если это необходимо, то вы можете задать имя (NAME) для кнопки ОТПРАВИТЬ (SUBMIT). Это нужно, если у вас две и больше кнопок отправки (SUBMIT).
+<br><br>
+И еще кое-что на закуску. Кроме своего адреса вы можете указать в форме, например, с каким заголовком будет отправлено вам письмо.
+ 
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;FORM METHOD=POST ACTION="mailto:michael@corleone.com<b>?subject=Заказ на убийство</b>" ENCTYPE="application/x-www-form-urlencoded"&gt;
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Ну, не здорово ли?
+</font>
+<br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<i>Примечание переводчика: конечно здорово. А кроме заголовка можно указать адреса куда будут отправлены копии письма и многое другое. Об этом вы узнаете <a href="14step2.html">в 14-ой главе учебника по html "Першi кроки</a>"</i>.
+</div>
+<br><br>
+<font face="times new roman">
+Вот и все, ребята! :)
+<br><br>
+Теперь вы знаете основные теги для того, чтобы построить форму. Конечно, это не все, но почти все, что вам следует знать о формах. Желаю вам хороших форм :)
+</font>
+<br><br><br>
+
+<img src="pic/wagon.gif">
+
+<br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<i>Примечание переводчика: а все о формах можно узнать, конечно же, <a href="http://www2.stack.ru/~julia/HTML401/cover.phtml" target="_blank">в спецификации по HTML</a></i>.
+</div>
+<br><br>
+
+<font face="times new roman">
+Це поки що все про мову html. Практикуйте! 
+<br><br>
+<center><a href="3stepForm.html">Назад</a> | повернутися до початку <a href="0stepForm.html">посiбника форм</a>. або на перегляд <a href="index.html">основ html</a>
+</center>
+</td></tr></table>
+</body>
+</html>

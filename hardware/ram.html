@@ -1,0 +1,132 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+   <meta name="GENERATOR" content="Mozilla/4.51 [ru] (Win95; I) [Netscape]">
+   <title>RAM</title>
+<style>
+<!-- hide from old browsers
+!New Style! {}
+-->
+</style>
+</head>
+<body text="#000000" bgcolor="#EFEFEF" link="#0000EE" vlink="#000099" alink="#3333FF">
+
+<div ALIGN=right>
+<h1>
+<a NAME="top"></a><font face="Arial,Helvetica"><font color="#000000"><font size=+2>Оперативная
+память</font></font></font></h1></div>
+
+<hr WIDTH="100%">
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Оперативная
+память современного компьютера выполнена</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>– на микросхемах динамического
+типа с произвольной выборкой (DRAM — Dynamic Random Access Memory),</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>– на микросхемах статического
+типа (SRAM — Static RAM).</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Различие
+между динамической и статической памятью — в способе хранения информации.
+В статической памяти данные хранятся вплоть до замены их новым блоком информации.
+В качестве элементарной ячейки статической памяти используется статический
+триггер. Статическая память обладает высоким быстродействием и используется
+для организации кэш-памяти. Динамическая память постоянно опрашивается,
+и ее содержание обновляется с частотой циклов регенерации. Она имеет меньшую
+скорость работы, но по критерию, учитывающему информационную емкость, стоимость
+и энергопотребление, она предпочтительней.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Модули оперативной памяти</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Элементы
+динамической памяти выполенны в виде модулей SIMM (Single-In-line Memory
+Module) и DIMM (Dual-In-line Memory Module). В отличие от SIMM, у модулей
+DIMM контакты на противоположных сторонах платы электрически не связаны
+между собой, практически вдвое увеличено количество выводов. DIMM — это
+двухсторонний модуль.</font></font><font size=-1></font>
+<p><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Виды модулей
+памяти:</font></font>
+<br><font size=-1></font>&nbsp;
+<table BORDER CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td><font face="Arial,Helvetica"><font size=-1>30-контактные (30-pin) SIMM
+8-разрядные емкостью 256 Кбайт, 1, 4, 16 Мбайт. Для 32-разрядных процессоров
+они устанавливаются на материнскую плату в количестве, кратном 4.</font></font></td>
+
+<td><img SRC="images/simm-30.jpeg" ALT="SIMM 30-pin" NOSAVE height=50 width=191></td>
+</tr>
+
+<tr>
+<td><font face="Arial,Helvetica"><font size=-1>72-контактные (72-pin) SIMM
+32-разрядные емкостью 1, 2, 4, 8, 16, 32, 64 Мбайт. В 486 компьютере могут
+устанавливаться по&nbsp; одному, в Pentium — кратно 2.</font></font></td>
+
+<td><img SRC="images/simm-72.jpeg" ALT="SIMM 72-pin" NOSAVE height=50 width=192></td>
+</tr>
+
+<tr>
+<td><font face="Arial,Helvetica"><font size=-1>168-контактные (168-pin)
+DIMM 64-разрядные емкостью 8, 16, 32, 64, 128, 256 Мбайт. В Pentium устанавливаются
+по одному.</font></font></td>
+
+<td><img SRC="images/dimm.jpeg" ALT="DIMM" NOSAVE height=54 width=192></td>
+</tr>
+</table>
+
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Размещение памяти</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Оперативную
+память персонального компьютера делят на банки. Банк определяет наименьшее
+количество памяти, которое может быть адресовано процессором за один раз
+и соответствует разрядности шины данных этого процессора. Для i486 (32-разрядный
+процессор) банк состоит из 4 разъемов для 30-контактных SIMM или из одного
+разъема для 72-контактного SIMM. Для процессора Pentium (64-разрядный)
+банк состоит из 2 разъемов для 72-контактных SIMM или из одного разъема
+для DIMM. Заполнение банков всегда начинается с банка 0. Каждый банк должен
+быть либо полностью заполненным, либо пустым. В каждом банке используются
+элементы одной емкости и быстродействия.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; На материнской
+плате современного компьютера для установки модулей памяти предусмотрены
+специальные разъемы (на рис. их по два):</font></font>
+<br><font size=-1></font>&nbsp;
+<table WIDTH="100%" >
+<tr>
+<td BGCOLOR="#CCCCCC">
+<center><font face="Arial,Helvetica"><font size=-1>72-pin SIMM Socket</font></font></center>
+</td>
+
+<td BGCOLOR="#CCCCCC">
+<center><font face="Arial,Helvetica"><font size=-1>DIMM Socket</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="images/simmsock.jpeg" ALT="SIMM Socket" NOSAVE height=43 width=236></center>
+</td>
+
+<td>
+<center><img SRC="images/dimmsock.jpeg" ALT="DIMM Socket" NOSAVE height=45 width=306></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><img SRC="images/montsimm.jpeg" ALT="Модуль памяти в SIMM Socket" NOSAVE height=108 width=200></center>
+</td>
+
+<td>
+<center><img SRC="images/montdimm.jpeg" ALT="Модуль памяти в DIMM Socket" NOSAVE height=113 width=200></center>
+</td>
+</tr>
+</table>
+<font size=-1></font>
+<p><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Количество
+разъемов того или другого или другого типа зависит от типа материнской
+платы, ее производителя.</font></font><font size=-1></font>
+<p><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Все возможные
+конфигурации памяти, т.е. тип, емкость, быстродействие и количество элементов,
+устанавливаемых на материнской плате, приводятся в документации на материнскую
+плату. Размер установленной оперативной памяти BIOS определяет автоматически.</font></font>
+<br>
+
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+
+<TITLE>Першi кроки - Частина дев'ята, як вставляти малюнок в документ, як прописувати шляхи.</TITLE>      
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+<table>
+	<tr>
+	<td width="600">
+<p align="JUSTIFY"><font face="times new roman">
+Традиційно для роботи з малюнками використовують різні середовища, наприклад, Adobe Photoshop та Image Styler 1.0. 
+<br><br> 
+Розглянемо, як використати різні графічні зображення в html-документі. Одразу потрібно зауважити, що цими речами не варто зловживати. Інакше це може зробити файл "важким". 
+<br><br> 
+Також не варто навантажувати сторінку анімованими малюнками (вони відволікають увагу від зміста сторінки, а якщо малюнок взагалі недоречний, то це мінус загальному вигляду усього документа).
+<br><br> 
+Розглянемо приклад, як вставити графічний файл (малюнок) в документ:
+<br><br> </font>
+<tt>&lt;img src="my.jpg"&gt;</tt>
+<br><br><font face="times new roman">
+Замість my.jpg можна підставити ім'я будь-якого малюнка (me.gif, main.png). Головне те, що все, що розташовано між лапками - посилання (шлях до файлу, що містить малюнок). Наш приклад говорить про те, що файл знаходиться у тому ж каталозі (директорії, папці), що й наш документ. Якщо малюнок лежить у піддиректорії, то посилання на нього буде виглядати наступним чином:
+<br><br> </font>
+<tt>&lt;img src="/my/my.jpg"&gt;</tt>
+<br><br> <font face="times new roman">
+Якщо файл знаходиться на рівень вище, а документ - у піддиректории, то посилання на нього буде таким: 
+<br><br> </font>
+<tt>&lt;img src="../my.jpg"&gt;</tt>
+<br><br> <font face="times new roman">
+Якщо малюнок лежить на іншому сайті, то шлях прописують повністю:
+<br><br> </font>
+<tt>&lt;img src="http://www.homepage.ru/my/my.jpg"&gt;</tt>
+<br><br> <font face="times new roman">
+Для зручності зберігайте малюнки у тій же директорії, що й  документ, буде менше помилок.
+<br><br> 
+Якщо у вас немає на даний момент жодного малюнку, то <a href="pic/pr1.png" target="_blank">збережить цей</a> (натиснувши на посилання) у себе в директорії з нашою сторінкою. У нашому прикладi використовується як раз цей файл. Запам'ятайте також, що тег img непарний (не потребує закриваючого).</font>
+</p>
+<img src="picsteps/step4.gif" align="left" width="20" height="250"><tt>&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Моя перша спроба &lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body text="#336699" bgcolor="#000000"&gt;<br>
+&lt;center&gt;<br>
+&lt;H3&gt;<font color="#336699">Вiтаю, це моя перша сторiнка.</font>&lt;/H3&gt;<br>
+&lt;br&gt;<br>
+&lt;font color="#CC0000"&gt;<font color="#CC0000"> Welcome!</font>&lt;/font&gt; <font color="#336699">:) </font>&lt;/center&gt;<br>
+&lt;p align="justify"&gt;<br><b>&lt;img src="pr1.png"&gt;</b><font color="#336699">
+Це коротка інформація про мову тегів HTML, яку можна використати для створення власної домашньої сторінки. </font>&lt;b&gt;<font color="#336699"><b> Успіхів! </b></font>&lt;/b&gt;<br>&lt;/p&gt;
+<br>&lt;/body&gt;<br>
+&lt;/html&gt; (<a href="primtocode_7.html" target="_blank"><font class="blink2"><i>див.приклад</i></font></a>)</tt>
+<br><br><p align="JUSTIFY"><font face="times new roman">
+Подивиться, що вийшло. Не дуже красиво. Було б краще, якщо текст акуратно розміщувався біля малюнку. Тому наступна частина про те, як це зробити.
+</p>
+
+<center><a href="8step2.html">Назад</a> | <a href="10step2.html">Наступна частина</a></center></font>
+</td>
+	</tr>
+ </table>
+
+</body>
+</html>

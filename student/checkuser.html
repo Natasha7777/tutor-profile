@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">  
+
+  <style>
+   #blink1 
+     { -webkit-animation: blink1 3s linear infinite; animation: blink1 3s linear infinite; 
+     } 
+   @-webkit-keyframes blink1 { 
+     0% { color: rgba(34, 34, 34, 1); } 50% { color: rgba(34, 34, 34, 0); } 100% { color: rgba(34, 34, 34, 1); } 
+     } 
+   @keyframes blink1 { 
+     0% { color: rgba(34, 34, 34, 1); } 50% { color: rgba(34, 34, 34, 0); } 100% { color: rgba(34, 34, 34, 1); } 
+     } 
+   a { 
+    text-decoration: bold; /* blink - не раб; none - Убираем подчеркивание у ссылок */
+   }
+   a:hover { 
+    text-decoration: underline; /* Добавляем подчеркивание 
+                                   при наведении курсора мыши на ссылку */
+   }
+  </style> 
+
+<script src="jquery.min.js" type="text/javascript"></script>
+<script language="JavaScript">
+
+var s=['А','Б','В','Г','Д','Е','Ж','З','И','Й','К','Л','М','Н','О','П','Р','С',
+'Т','У','Ф','Х','Ц','Ч','Ш','Щ','Ъ','Ы','Ь','Э','Ю','Я','I','Ї','Є','.',',',
+       'а','б','в','г','д','е','ж','з','и','й','к','л','м','н','о','п','р','с',
+'т','у','ф','х','ц','ч','ш','щ','ъ','ы','ь','э','ю','я','i','ї','є',' ','\0'];
+
+var b=[192,193,194,195,196,197,198,199,200,201,202,203,204,205,  
+206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221, 
+222,223,178,175,170,46,44, 224,225,226,227,228,229,230,231,232,233,
+234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250, 
+251,252,253,254,255,179,191,186,32,0];
+
+<!--
+$('#ftest').load(function () {  self.location=s; });
+-->
+
+function decode16(aa) 
+{
+    alert(aa);
+    var bb = '', c = 0;
+    for (var i = 0; i < aa.length; ) 
+    {
+      z= aa.charAt(i);        
+      if (z=='%')
+      {
+        switch((aa.charAt(i+1)).toUpperCase())
+        {
+         case '0': k=0; break;
+         case '1': k=1; break;
+         case '2': k=2; break;
+         case '3': k=3; break;
+         case '4': k=4; break;
+         case '5': k=5; break;
+         case '6': k=6; break;
+         case '7': k=7; break;
+         case '8': k=8; break;
+         case '9': k=9; break;
+         case 'A': k=10; break;
+         case 'B': k=11; break;
+         case 'C': k=12; break;
+         case 'D': k=13; break;
+         case 'E': k=14; break;
+         case 'F': k=15; break;
+        }
+        switch((aa.charAt(i+2)).toUpperCase())
+        {
+         case '0': r=0; break;
+         case '1': r=1; break;
+         case '2': r=2; break;
+         case '3': r=3; break;
+         case '4': r=4; break;
+         case '5': r=5; break;
+         case '6': r=6; break;
+         case '7': r=7; break;
+         case '8': r=8; break;
+         case '9': r=9; break;
+         case 'A': r=10; break;
+         case 'B': r=11; break;
+         case 'C': r=12; break;
+         case 'D': r=13; break;
+         case 'E': r=14; break;
+         case 'F': r=15; break;
+        }
+        c= k*16+r;
+        //vv=vv+c+'.';
+        if (c > 127) 
+        {
+            j=0;
+            while ((c != b[j])&&(j<b.length))  {j++; }
+              if (j<t.length) bb += s[j]; else bb += ':';
+            
+        } else 
+        {
+            if (c==32) bb+=' ';
+            else bb += z;
+        }
+       i+=3;
+      } 
+      else {bb += z; i++;}
+    }
+ Nuser=bb;
+ return bb;
+}
+
+</script> 
+
+</head>
+<body alink="blue" vlink="blue">
+<center>
+<h2 id="blink1">Вiдбувається вхiд до системи</h2>
+<!---->
+
+<script language="JavaScript">
+userName = ""+ document.location;
+n = userName.indexOf("?")+1;
+userName= userName.substring(n);
+n = userName.indexOf("=")+1;
+par0=userName.substr(0,n-1);
+userName= userName.substring(n);
+//n=parseInt(par0);
+//par0=""+(10000-n);
+n= userName.indexOf("=")+1;
+par1=userName.substr(0,n-1);
+userName= userName.substring(n);
+n= userName.indexOf("=")+1;
+par2=userName.substr(0,n-1);
+par3=userName.substr(n);
+//document.write("<p>Code=" + par0 + " Login=" + par1 + " | " + " Password=" + par3 + " !");
+zz="http://stab.univ.kiev.ua/cgi-bin/testuser.exe?"+par0+"&Login="+par1+"&Password="+par3;
+//
+    var bb = '', c = 0;
+    for (var i = 0; i < par2.length; ) 
+    {
+      z= par2.charAt(i);        
+      if (z=='%')
+      {
+        switch((par2.charAt(i+1)).toUpperCase())
+        {
+         case '0': k=0; break;
+         case '1': k=1; break;
+         case '2': k=2; break;
+         case '3': k=3; break;
+         case '4': k=4; break;
+         case '5': k=5; break;
+         case '6': k=6; break;
+         case '7': k=7; break;
+         case '8': k=8; break;
+         case '9': k=9; break;
+         case 'A': k=10; break;
+         case 'B': k=11; break;
+         case 'C': k=12; break;
+         case 'D': k=13; break;
+         case 'E': k=14; break;
+         case 'F': k=15; break;
+        }
+        switch((par2.charAt(i+2)).toUpperCase())
+        {
+         case '0': r=0; break;
+         case '1': r=1; break;
+         case '2': r=2; break;
+         case '3': r=3; break;
+         case '4': r=4; break;
+         case '5': r=5; break;
+         case '6': r=6; break;
+         case '7': r=7; break;
+         case '8': r=8; break;
+         case '9': r=9; break;
+         case 'A': r=10; break;
+         case 'B': r=11; break;
+         case 'C': r=12; break;
+         case 'D': r=13; break;
+         case 'E': r=14; break;
+         case 'F': r=15; break;
+        }
+        c= k*16+r;
+        if (c > 127) 
+        {
+            j=0;
+            while ((c != b[j])&&(j<b.length))  {j++; }
+              if (j<b.length) bb += s[j]; else bb += ':';
+            
+        } else 
+        {
+            if (c==32) bb+=' ';
+            else bb += z;
+        }
+       i+=3;
+      } 
+      else {bb += z; i++;}
+    }
+//
+bb="Користувач: "+bb;
+st=bb+"<a style='-moz-text-decoration-style: wavy; -moz-text-decoration-color: blue; ' href='"+zz+"'>...Перевiрка...</a>";
+document.write(st);
+</script> 
+
+<!--img width=0 height=0 src="http://stab.univ.kiev.ua/cgi-bin/test.exe?Login=par1&Password=par3"-->
+
+</center>
+</body>
+</html>

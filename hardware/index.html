@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+	<title>Моя сторiнка - Дисциплiна: Архiтектура ОС</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta name="language" content="ua">
+	<link href="../ico.jpg" rel="shortcut icon">
+	<link rel="stylesheet" href="../aeom.css" type="text/css">
+	<script type="text/javascript" src="http://yandex.st/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		var heights = {
+			"vstup.html": 600,
+			"sysblock.html": 800,
+			"blokpit.html": 850,
+			"sysboard.html": 1000,
+			"sysboar2.html": 600,
+			"sboardii.html": 1300,
+			"cpu.html": 1400,
+			"cpuhist.html": 1950,
+			"icomp.html": 400,
+			"othercpu.html": 1400,
+			"cocpu.html": 400,
+			"memory.html": 350,
+			"ram.html": 1000,
+			"cachemem.html": 550,
+			"bios.html": 900,
+			"chipset.html": 1000,
+			"isa-pci.html": 1200, 
+			"agp.html": 700,
+			"drives.html": 650,
+			"hdd.html": 1200,
+			"interf.html": 1250,
+			"fdd.html": 800,
+			"strmr.html": 700,
+			"zip.html": 600,
+			"cd-rom.html": 600,
+			"v-system.html": 850,
+			"monitor.html": 700,
+			"vadapter.html": 1400,
+			"v-rc.html": 800,
+			"v-card.html": 950,
+			"netcard.html": 950,
+			"sound.html": 1000,
+			"modem.html": 950,
+			"ports.html": 1000,
+			"perif.html": 600,
+			"keyb.html": 600,
+			"mouse.html": 800,
+			"joystick.html": 350,
+			"scaner.html": 1000,
+			"printer.html": 700,
+			"matr-prn.html": 400,
+			"inkjet.html": 700,
+			"laserprn.html": 900,
+			"plotter.html": 650,
+			"firms.html": 4200
+		};
+		$('font > a').each(function () {
+			$(this).click(function () {
+				$('font > a').removeClass('active');
+				$(this).addClass('active');
+				$("#textbody").attr('src', $(this).attr('data-document'));
+				$('#wrapper').css('height', (2 * heights[$(this).attr('data-document')]) + 'px');
+			});
+		});
+	});
+	</script>
+ </head>
+ 
+<body bgcolor="#EFEFEF" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" class="kek.css">
+<table cellspacing="0" cellpadding="0" border=0 bgcolor="#EFEFEF" width="100%" height="100%" style="padding-top: 12px;">
+  <tr valign="middle">
+   <td height="120" align="left" colspan="2" style="padding-left: 10px;">
+
+   <table border="0" width="100%">
+	 <tr valign="top">
+		<td valign="middle" width="100%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="5%"><nobr>
+<a href="../index.html"><img border="0" style="vertical-align: middle"  src="../PICs/logotestU.jpg" /></a>
+</nobr>
+</td>
+<td width="95%" align="center" style="text-align: center; color: black; font-size: 24; font-family: Verdana">
+<font style="text-align: center; color: #696969; font-size: 13px; font-family: Verdana">Київський національний університет імені Тараса Шевченка<br/>
+факультет кібернетики</font><br/><font style="font-size: 10px"><br/></font>Кафедра системного аналізу та теорії прийняття рішень</td>
+</tr>
+</table></td>
+	<td style="padding-right: 5px; text-align: right; vertical-align: top; width: 100px;"><nobr><a data-document="?action=language&params=ua"><img valign="center" border=0 alt="Українська" src="../PICs/ua.png"/></a>&nbsp;&nbsp;
+<a data-document="?action=language&params=ru"><img valign="center" border=0 alt="Русский" src="../PICs/ru.png"/></a>&nbsp;&nbsp;
+<a data-document="?action=language&params=en"><img valign="center" border=0 alt="English" src="../PICs/en.png"/></a>&nbsp;&nbsp;
+</nobr></td>
+	 </tr>
+	</table>
+  </tr>
+
+
+  <tr valign="top">
+   <td valign="top">
+    
+	
+   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+	 <td valign="top" align="left" width="270" height="100%">
+
+	 <table border="0" cellspacing="0" cellpadding="0" width="270">
+	  <tr valign="top"><td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="270">
+<tr>
+<td style="height: 20px"><img src="../PICs/top_left.png"/></td>
+<td background="../PICs/horisontal.png" style="background-repeat:repeat-x; height: 20px"></td>
+<td style="height: 20px"><img src="../PICs/top_right.png"/></td>
+</tr>
+<tr>
+<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+<td style="font-family: Arial; font-size: 15px; text-align: center" bgcolor="#FFffa1">
+<i><font style="color:darkblue; font-weight: bold">З</font><font style="color: black">мiст</font></i></td>
+<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+</tr>
+<tr>
+<td style="height: 20px"><img src="../PICs/separator_left.png"/></td>
+<td background="../PICs/horisontal.png" style="background-repeat:repeat-x; height: 20px"></td>
+<td style="height: 20px"><img src="../PICs/separator_right.png"/></td>
+</tr>
+<tr>
+<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+<!-- MAIN MENU BLOCK START -->
+<td>
+<b><font face="Arial,Helvetica"><font size=-1> <a data-document="vstup.html" style="cursor:pointer">Вступ</a></font></font></b>
+<br>
+<b><font face="Arial,Helvetica"><font size=-1>1. <a data-document="sysblock.html" style="cursor:pointer">Системний
+блок</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.1. <a data-document="blokpit.html" style="cursor:pointer">Блок
+живлення</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.2. <a data-document="sysboard.html" style="cursor:pointer">Системна
+плата</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.3. <a data-document="sysboar2.html" style="cursor:pointer">Конфігурація
+материнської плати</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.4. <a data-document="sboardii.html" style="cursor:pointer">Сучасні
+материнські плати</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.5. <a data-document="cpu.html" style="cursor:pointer">Процесор</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.6. <a data-document="cpuhist.html" style="cursor:pointer">Історія
+процесорів x86</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.7. <a data-document="icomp.html" style="cursor:pointer">Потужність
+процесора</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.8. <a data-document="othercpu.html" style="cursor:pointer">Інші
+виробники процесорів</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.9. <a data-document="cocpu.html" style="cursor:pointer">Сопроцесор</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.10. <a data-document="memory.html" style="cursor:pointer">Пам'ять</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.11. <a data-document="ram.html" style="cursor:pointer">Оперативна
+пам'ять</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.12. <a data-document="cachemem.html" style="cursor:pointer">Кеш-пам'ять</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.13. <a data-document="bios.html" style="cursor:pointer">BIOS
+і CMOS RAM</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.14. <a data-document="chipset.html" style="cursor:pointer">Допоміжні
+мікросхеми</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.15. <a data-document="isa-pci.html" style="cursor:pointer">Системні
+шини</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>1.16. <a data-document="agp.html" style="cursor:pointer">Шина
+AGP</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>2. <a data-document="drives.html" style="cursor:pointer">Накопичувачі</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.1. <a data-document="hdd.html" style="cursor:pointer">Жорсткий
+диск (вінчестер)</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.2. <a data-document="interf.html" style="cursor:pointer">Інтерфейси
+жорстких дисків</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.3. <a data-document="fdd.html" style="cursor:pointer">Накопичувач 
+гнучких дисків</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.4. <a data-document="strmr.html" style="cursor:pointer">Стрімер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.5. <a data-document="zip.html" style="cursor:pointer">Накопичувачі
+Bernulli (zip-drives)</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>2.6. <a data-document="cd-rom.html" style="cursor:pointer">Накопичувачі
+CD-, DVD-дисків</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>3. <a data-document="v-system.html" style="cursor:pointer">Відеосистема</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>3.1 <a data-document="monitor.html" style="cursor:pointer">Монітор</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>3.2. <a data-document="vadapter.html" style="cursor:pointer">Відеоадаптер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>3.3. <a data-document="v-rc.html" style="cursor:pointer">Розподільча
+здатність та  кольори</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>3.4. <a data-document="v-card.html" style="cursor:pointer">Відеоплати (відеокарти)</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>4. <a data-document="netcard.html" style="cursor:pointer">Мережевий
+адаптер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>5. <a data-document="sound.html" style="cursor:pointer">Звуковий
+адаптер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>6. <a data-document="modem.html" style="cursor:pointer">Модем</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>7. <a data-document="ports.html" style="cursor:pointer">Порти
+вводу-виводу</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>8. <a data-document="perif.html" style="cursor:pointer">Периферійні
+пристрої</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.1. <a data-document="keyb.html" style="cursor:pointer">Клавіатура</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.2. <a data-document="mouse.html" style="cursor:pointer">Маніпулятор (миша)</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.3. <a data-document="joystick.html" style="cursor:pointer">Джойстік</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.3. <a data-document="scaner.html" style="cursor:pointer">Сканер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.4. <a data-document="printer.html" style="cursor:pointer">Принтер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.5. <a data-document="matr-prn.html" style="cursor:pointer">Матричний
+принтер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.6. <a data-document="inkjet.html" style="cursor:pointer">Струйний
+принтер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.7. <a data-document="laserprn.html" style="cursor:pointer">Лазерний
+принтер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-2>8.8. <a data-document="plotter.html" style="cursor:pointer">Плоттер</a></font></font></b>
+<br><b><font face="Arial,Helvetica"><font size=-1>9. <a data-document="firms.html" style="cursor:pointer">Список виробників</a></font></font></b>
+</td>
+<!-- MAIN MENU BLOCK END -->
+<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+</tr>
+<tr>
+<td style="height: 20px"><img src="../PICs/bottom_left.png"/></td>
+<td background="../PICs/horisontal.png" style="background-repeat:repeat-x; height: 20px"></td>
+<td style="height: 20px"><img src="../PICs/bottom_right.png"/></td>
+</tr>
+</table>
+<!-- green 45db10 blue 4b4bb1 --></td>
+
+</table>
+</td>
+
+<td width="100%" align="left" valign="top" height="100%">
+<table height="100%" width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="padding-top: 0px; padding-bottom: 0px">
+	<tr>
+		<td style="padding: 0px;height: 20px; width: 20px"><img src="../PICs/top_left.png"/></td>
+		<td background="../PICs/horisontal.png" style="padding: 0px; background-repeat:repeat-x; height: 20px"></td>
+		<td style="padding: 0px;height: 20px; width: 20px"><img src="../PICs/top_right.png"/></td>
+	</tr>
+	<tr>
+		<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+                <td style="font-family: Arial; font-size: 15px; text-align: center" bgcolor="#FFffa1">
+                <i><font style="color:darkblue; font-weight: bold">А</font><font style="color: black">рхiтектура обчислювальних систем</font></i></td>
+		<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+	</tr>
+
+	<tr>
+		<td style="height: 20px"><img src="../PICs/separator_left.png"/></td>
+		<td height=100% background="../PICs/horisontal.png" style="background-repeat:repeat-x; height: 20px"></td>
+		<td style="height: 20px"><img src="../PICs/separator_right.png"/></td>
+	</tr>
+    <tr>
+    	<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>	
+    	<td style="background-position:right; background-repeat:no-repeat; padding-left: 5px; padding-top: 5px; height: 100%; width: 100%" valign="top">
+			<table width="100%" height="100%" border="0" cellspacing="2" cellpadding="5" align="left" style="font-family: Tahoma; font-size: 12px; padding: 0px;">
+				<tr>
+					<td id="wrapper" width="100%" height="600px" align="left" style="padding: 0px;">
+						<iframe id="textbody" src="vstup.html" height="100%" width="100%" style="border: none; margin: 0px;"></iframe>
+					</td>
+				</tr>
+		</td>
+	</tr>
+</table>
+
+
+             </td>
+    	<td background="../PICs/vertical.png" style="background-repeat:repeat-y; width: 20px"></td>
+    </tr>
+    <tr>
+		<td style="height: 20px; width: 20px"><img src="../PICs/bottom_left.png"/></td>
+		<td background="../PICs/horisontal.png" style="background-repeat:repeat-x; height: 20px"></td>
+		<td style="height: 20px; width: 20px"><img src="../PICs/bottom_right.png"/></td>
+	</tr>
+</table>
+</td>
+</td></tr>
+</table>
+</td>	
+</tr>
+</table>
+</body>
+</html>

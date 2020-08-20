@@ -1,0 +1,248 @@
+<html>
+  <head>
+  <title>Вхiд та реєстрацiя (mode=звязанi селекти)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">  
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+<style>
+#blink2 { -webkit-animation: blink2 1s linear infinite; animation: blink2 1s linear infinite; } @-webkit-keyframes blink2 { 100% { color: rgba(34, 34, 34, 0); } } @keyframes blink2 { 100% { color: rgba(34, 34, 34, 0); } }
+</style>
+
+  <!-- Подключаем javascript-библиотеку функций -->
+  <script type="text/javascript" src="linkedselect.js"></script>
+  <script src="jquery.min.js" type="text/javascript"></script>
+
+<script>
+
+ var Lout=new String;
+ var ng;
+
+ var rus_cod = ["A__", "B__", "V__", "G__", "D__", "E__", "GH_", "Z__",
+"I__", "Y__", "K__", "L__", "M__", "N__", "O__", "P__", "R__", "S__", "T__", "U__", "F__", "XA_",
+"TS_", "TC_", "SH_", "SC_", "!__", "YY_", "@__", "YE_", "YU_", "YA_", "a__", "b__", "v__", "g__",
+"d__", "e__", "gh_", "z__", "i__", "y__", "k__", "l__", "m__", "n__", "o__", "p__", "r__",
+"s__", "t__", "u__", "f__", "xa_", "ts_", "tc_", "sh_", "sc_", "#__", "yy_", "$__", "ye_", "yu_",
+"ya_", "IY_", "iy_", "YI_", "yi_", "E#_", "e$_", "" ]; 
+
+var rus_ch = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З',
+'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х',
+'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я', 'а', 'б', 'в', 'г',
+'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р',
+'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю',
+'я','І','і','Ї','ї','Є','є','\0'];
+
+function Recodetl(Lin)
+{
+ k=0;
+ Lout="";
+ for(var i=0;i<Lin.length;i++)
+  {
+  j=0;
+  //
+  while(j<rus_cod.length)
+   {
+   if ((Lin.charAt(i)==rus_cod[j].charAt(0)) && (Lin.charAt(i+1)==rus_cod[j].charAt(1)) && (Lin.charAt(i+2)==rus_cod[j].charAt(2)))
+    {
+      Lout=Lout+rus_ch[j];  
+      j=-1; break;
+    }
+    j++;
+   }
+
+  if (j!=-1)
+   {
+    Lout=Lout+Lin.charAt(i); 
+    k++;
+   }
+  else { i+=2; 
+	 k++;}
+  }
+  Lout=Lout+'\0';
+ return;
+}
+</script>
+
+<script>
+$(document).ready(function () 
+{
+    $('#List1').change(function () 
+    {
+        var group_id = $(this).val();
+        if (group_id == '0') 
+        {
+            $('#List2').html('');
+            $('#List2').attr('disabled', true);
+            return(false);
+        }
+	ng=$(this).val();
+	//alert(ng);
+        $('#List2').attr('disabled', true);
+        $('#List2').html('<option>загрузка...</option>');
+        
+        var url = 'ff.dat';       
+        var data = "";
+
+      $.get( url, data, success, "json" );
+	  
+	    function success( fData ) {
+	      var f = "MI: "+fData.mi + " TTP: " + fData.ttp + " TK: " + fData.tk + " KI: "+fData.ki;
+	      var s=""; 
+//alert(fData.ki); 
+		Recodetl(fData.mi);
+		s=Lout;
+		var smi= new String(s); 
+		  //var smi= new String(fData.mi);
+		Recodetl(fData.ttp);
+		s=Lout;
+		var stp= new String(s); 
+		  //var stp= new String(fData.ttp);
+		Recodetl(fData.tk);
+		s=Lout;
+		var stk= new String(s); 
+		  //var stk= new String(fData.tk);
+		Recodetl(fData.ki);
+		s=Lout;
+		var ski= new String(s); 
+                var options = '';
+		var mas;
+		switch(group_id)
+		{
+		 case "MI": mas=smi.split(','); break;	
+		 case "TTP": mas=stp.split(','); break;	
+		 case "TK": mas=stk.split(','); break;	
+		 case "KI": mas=ski.split(','); break;	
+		}
+		//alert();
+		var m=[];
+                    for (var i=0; i<mas.length; i++)
+			m[i]=mas[i].split(':');
+                    for (var i=0; i<mas.length; i++)
+                    {
+                        options += '<option value="' + m[i][0] + '">' + m[i][1]+ '</option>';
+                    }
+                    $('#List2').html(options);
+                    $('#List2').attr('disabled', false);
+
+	 }
+
+    });
+});
+
+	  
+window.onload = function () {
+    document.getElementById("List1").selectedIndex = -1;
+}	  
+
+
+function nvalue()
+{
+ if ((List2.selectedIndex == -1) || (List1.selectedIndex == -1))
+  {alert("Не обрано ПIБ зi списку"); return;}
+ for(var i=0;i<List2.length;i++)
+  {
+   if (List2.options[i].selected==true) break;
+  }
+ s='<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">';
+ s=s+"<center> <h2 class='blink2'>Обробка даних</h2> </center>";
+ s=s+"<table ALIGN='center' style='border-style: solid; border-width: 2px;'>";
+ s=s+"<tr><td>ПIБ</td> <td>Група</td> <td>&nbsp; Рiк &nbsp;</td></tr>";
+ s=s+"<tr><td>"+List2.options[i].text+"</td>"; 
+ s=s+"<td>"+ng+"</td><td>2014 &nbsp;</td></tr>";
+ s=s+"</table><br><center>";                                                   
+ s=s+"<a href='javascript:history.back()'>Назад</a>&nbsp; &nbsp; &nbsp;";
+ s=s+"<a href='selectEnter.html?="+List2.options[i].value+"="+List2.options[i].text+"'>Продовжити</a>";
+
+ document.write(s);
+}
+
+function ntext()
+{
+ if ((List2.selectedIndex == -1) || (List1.selectedIndex == -1))
+  {alert("Не обрано ПIБ зi списку"); return;}
+ for(var i=0;i<List2.length;i++)
+  {
+   if (List2.options[i].selected==true) break;
+  }
+ s='<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">';
+ s=s+"<center> <h2 class='blink2'>Iнiцiалiзацiя даних</h2> </center>";
+ s=s+"<table ALIGN='center' style='border-style: solid; border-width: 2px;>'>";
+ s=s+"<tr><td>ПIБ</td> <td>Група</td> <td>&nbsp; Рiк &nbsp;</td></tr>";
+ s=s+"<tr><td>"+List2.options[i].text+"</td>"; 
+ s=s+"<td>"+ng+"</td><td>2014 &nbsp;</td></tr>";
+ s=s+"</table><br><center>";                                                   
+ s=s+"<a href='javascript:history.back()'>Назад</a>&nbsp; &nbsp; &nbsp;";
+ s=s+"<a href='selectInit.html?="+List2.options[i].value+"="+List2.options[i].text+"'>Продовжити реєстрацiю</a>";
+ document.write(s);
+}
+
+</script>
+</head>
+
+<body>
+<center>
+<h2 id="blink2">Оберiть свої данi</h2>
+</center>
+<table ALIGN="center" style="border-style: solid; border-width: 2px;">
+<tr><td>
+
+<table>
+<tr> <td>Група</td>
+<td>
+<!-- Первый (главный) список (изначально заполнен вручную) -->
+  <select size="1" id="List1" name="List1">
+    <option value="MI" selected> MI </option>
+    <option value="TTP"> TTP </option>
+    <option value="TK"> TK </option>
+    <option value="KI"> KI </option>
+  </select>
+  
+</td>
+</tr>
+<tr><td>Список</td>
+<td>
+<!-- Подчиненный список 1 (изначально пуст) -->
+  <select size="1" id="List2" name="List2"></select>
+  
+<script type="text/javascript">
+
+// Создаем новый объект связанных списков
+var syncList1 = new syncList;
+
+// Определяем значения подчиненных списков 
+
+/*syncList1.dataList = {
+
+  'MI':{
+      'mi1':'PIB11',
+      'mi2':'PIB12'
+  },
+  
+  'TTP':{
+      'TTP1':'PIB21',
+      'TTP2':'PIB22'
+  },
+  'TK':{
+      'TK1':'PIB31',
+      'TK2':'PIB32'
+  }
+}; 
+*/
+/* Определяем элементы второго списка в зависимости 
+от выбранного значения в первом списке */
+
+// Включаем синхронизацию связанных списков
+syncList1.sync("List1","List2");
+</script>
+</td></tr>
+</table>
+</td></tr>
+<tr><td width="195" VALIGN="bottom">
+&nbsp; 
+ <form method="get" name="f1">
+    <input type="button" name="b1" value="Вхiд" onClick="nvalue();">
+    <input type="button" name="b2" value="Зареєструватися" onClick="ntext();">
+ </form>
+</td></tr></table>
+
+</body>
+</html>

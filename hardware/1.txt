@@ -1,0 +1,7 @@
+http://svarka.susu.ac.ru/hardware/
+
+<td WIDTH="10%">
+<center><a href="#top"><img SRC="images/top.gif" NOSAVE BORDER=0 height=20 width=20></a></center>
+</td>
+
+

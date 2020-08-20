@@ -1,0 +1,106 @@
+<html>
+<head>
+
+
+<TITLE>Першi кроки - Частина шоста, параграфи, центрування, вирівнювання тексту за лівим, за правим краєм, по центру.</TITLE>      
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+<table>
+	<tr>
+	<td width="600">
+
+<p align="JUSTIFY"><font face="times new roman">
+У цій частині поговоримо про параграфи. Параграфи визначаються тегом:
+<br><br></font>
+<tt>&lt;p&gt;&lt;/p&gt;</tt>
+<br><br><font face="times new roman">
+За допомогою параграфів можна центрувати текст:
+<br><br></font>
+<tt>&lt;p align="center"&gt;текст&lt;/p&gt;</tt>
+<br><br><font face="times new roman">
+За допомогою параграфів можна вирівняти текст за лівим краєм:
+<br><br></font>
+<tt>&lt;p align="left"&gt;текст&lt;/p&gt;</tt>
+<br><br><font face="times new roman">
+Або за правим краєм документу:
+<br><br></font>
+<tt>&lt;p align="right"&gt;текст&lt;/p&gt;</tt>
+<br><br><font face="times new roman">
+Тепер задамо параграфи для нашого документу і подивимося, що відбувається (у нашому прикладі задамо параграф з параметром центрування тексту (center), спробуйте підставити у параграф інші параметри зі значеннями Left або Right).
+</font></p>
+
+<img src="picsteps/step4.gif" align="left" width="20" height="180">
+<tt>&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Моя перша спроба &lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body text="#336699" bgcolor="#000000"&gt;<br>
+<b>&lt;p align="center"&gt;</b><br>
+<font color="#336699">
+Вiтаю, це моя перша сторiнка.</font><br>
+&lt;br&gt;<br>
+&lt;font color="#CC0000"&gt;<font color="#CC0000"> Welcome!</font>&lt;/font&gt; <font color="#336699"> </font><b>&lt;/p&gt;</b><br>
+&lt;/body&gt;<br>
+&lt;/html&gt; (<a href="primtocode_4.html" target="_blank"><font class="blink2"><i>див.приклад</i></font></a>)</tt>
+<br><br><p align="JUSTIFY"><font face="times new roman">
+Зауважте, що текст у документі, якщо не задавати параграфи, завжди вирівнюється за замовчанням за лівим краєм. Також запам'ятайте, що для параграфу вже не потрібний тег &lt;br&gt; для переносу рядків, тому що перенос здійснюється за замовчанням. Але що робити, якщо цей перенос не потрвбний? Є  альтернативний тег &lt;p align="center"&gt;:
+<br><br></font>
+<tt>&lt;center&gt;текст&lt;/center&gt;</tt>
+</p>
+
+<img src="picsteps/step4.gif" align="left" width="20" height="180">
+<tt>&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Моя перша спроба &lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body text="#336699" bgcolor="#000000"&gt;<br><b>
+&lt;center&gt;</b><br>
+<font color="#336699">
+Вiтаю, це моя перша сторiнка.</font><br>
+&lt;br&gt;<br>
+&lt;font color="#CC0000"&gt;<font color="#CC0000"> Welcome!</font>&lt;/font&gt; <font color="#336699">:) </font><b>&lt;/center&gt;</b><br>
+&lt;/body&gt;<br>
+&lt;/html&gt; (<a href="primtocode_41.html" target="_blank"><font class="blink2"><i>див.приклад</i></font></a>)</tt>
+<br><br><p align="JUSTIFY"><font face="times new roman">
+
+Все було б добре, якщо б у тега &lt;p&gt; не існувало ще одного небезпечного значення (атрибута):
+<br><br></font>
+<tt>&lt;p align="justify"&gt;текст&lt;/p&gt;</tt>
+<br><br><font face="times new roman">
+Цей атрибут параграфу вирівнює текст за обома краями документу, і все стає красивим та акуратним. Чому ж це небезпечний атрибут параграфа? Він не працює у старих версіях броузеров, тому усі вирівнювання можут не відбутися (тобто текст вирівнюється у такому випадку за лівим краєм документу). Разом з тим атрибут justify використовується достатньо часто. 
+</font></p>
+
+<img src="picsteps/step4.gif" align="left" width="20" height="270">
+<tt>&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;title&gt;Моя перша спроба &lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body text="#336699" bgcolor="#000000"&gt;<br>
+&lt;center&gt;<br>
+<font color="#336699">
+Вiтаю, це моя перша сторiнка.</font><br>
+&lt;br&gt;<br>
+&lt;font color="#CC0000"&gt;<font color="#CC0000"> Welcome!</font>&lt;/font&gt; <font color="#336699">:) </font>&lt;/center&gt;<br><b>
+&lt;p align="justify"&gt;</b><br><font color="#336699">
+Це коротка інформація про мову тегів HTML, яку можна використати для створення власної домашньої сторінки.</font><br><b>&lt;/p&gt;</b>
+<br>&lt;/body&gt;<br>
+&lt;/html&gt; (<a href="primtocode_42.html" target="_blank"><font class="blink2"><i>див.приклад</i></font></a>)</tt>
+<br><br><br><p align="JUSTIFY"><font face="times new roman">
+Це приклад тексту, для якого використано параметр justify. 
+<br><br>
+Перевірили? - Йдемо далі.
+</p>
+
+<center><a href="5step2.html">Назад</a> | <a href="7step2.html">Наступна частина</a></center></font>
+
+</td>
+	</tr>
+ </table>
+
+</body>
+</html>

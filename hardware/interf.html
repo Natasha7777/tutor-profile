@@ -1,0 +1,143 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+   <meta name="GENERATOR" content="Mozilla/4.51 [ru] (Win95; I) [Netscape]">
+   <title>interf</title>
+<style>
+<!-- hide from old browsers
+!New Style! {}
+-->
+</style>
+</head>
+<body text="#000000" bgcolor="#EFEFEF" link="#0000EE" vlink="#000099" alink="#3333FF">
+
+<div ALIGN=right>
+<h1>
+<a NAME="top"></a><font face="Arial,Helvetica"><font color="#000000"><font size=+2>Интерфейс
+жесткого диска</font></font></font></h1></div>
+
+<hr WIDTH="100%">
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Для подключения
+накопителя в систему используется либо интерфейс IDE, либо ATA, либо SCSI.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Интерфейс SCSI</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Интерфейс
+SCSI (Small Computer System Interface, читается "scuzzy") cтандартизован
+и используется с 1986 г. как промышленный стандарт для подключения периферийных
+устройств. Контроллеры SCSI применяются в различных компьютерных системах.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Подключаемые
+к шине SCSI устройства обрабатываются как Initiator (ведущий) и Target
+(ведомый). Одно и то же устройство может быть как ведущим, так и ведомым.
+Принято 4 схемы подключения устройств: "один ведущий–один ведомый", "один
+ведущий–несколько ведомых", "несколько ведущих–один ведомый", "несколько
+ведущих–несколько ведомых".</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; К шине
+подключается до 8 устройств, одно из которых — основной адаптер SCSI (хост-адаптер).
+Возможно использовать до 4 хост-адаптеров, соответственно до 28 периферийных
+устройств. Хост-адаптер имеет собственную BIOS размером 16 Кбайт. Каждое
+устройство имеет свой адрес (идентификатор) SCSI ID. Для хост-адаптера
+используется SCSI ID=7. У загрузочного диска ID=0, для второго диска ID=1.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Используемые
+системные ресурсы — порты ввода-вывода, прерывания IRQ, каналы DMA. Иногда
+используются регистры верхней области памяти UMB (Upper Memory Blocks).</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Физически
+шина SCSI представляет собой плоский кабель с 50-контактными разъемами.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Характеристики
+шины: 8 линий данных, синхронный и асинхронный (с сигналами передачи и
+приема) режимы передачи данных, скорость передачи данных 1,5 Мбайта/с (асинхронный
+режим) и 3–4 Мбайт/с (синхронный режим).</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; <b>Стандарт
+SCSI-2</b></font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Окончательная
+редакция стандарта SCSI-2 принята в 1994 г.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Включены
+команды поддержки CD-ROM, сканера, коммуникационных устройств, оптических
+накопителей.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Введен
+широкий вариант шины данных (Wide SCSI-2), предусматривающий наличие дополнительных
+24 информационных линий. Для устройств с разрядностью более 8 используется
+дополнительный 68-проводный кабель.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Введен
+скоростной вариант шины (Fast SCSI-2) путем удвоения частоты обмена за
+счет применения новых микросхем, кабелей, активного согласования линий.
+Производительность возросла до 10 Мбайт/с.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Совместное
+использование Fast и Wide SCSI-2 позводяет достичь быстродействия до 40
+Мбайт/с.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; <b>Производители
+</b>адаптеров
+SCSI — Adaptec, Future Domain, DPT, NCR и др.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Интерфейс ATA</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Интерфейс
+АТА (AT Attachment) предложен в 1988 г. фирмой Conner и стандартизован
+в 1990 г.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Основное
+интерфейса от SCSI — реализация функций контроллера в самом накопителе.
+Накопитель АТА имеет дополнительно сепаратор данных и однокристальный микроконтроллер.
+Сепаратор данных выделяет из входного считываемого сигнала сигналы синхронизации
+и данных. Микроконтроллер обрабатывает команды и управляет работой накопителя.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; АТА-накопители
+поддерживают программный ввод-вывод по 8- или 16-разрядной шине данных.
+Современные модели имеют возможность обмена по DMA.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Для присоединения
+устройства используется 40-контактный плоский кабель длиной не более 50
+см.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Скорость
+обмена данными — до 10 Мбайт/с — обеспечена за счет использования аппаратной
+кэш-памяти, трансляции физических параметров диска в логические.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; К одному
+разъему АТА можно подключить два жестких диска — Master (управляющий) и
+Slave (управляемый).</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Серьезным
+ограничением АТА является предел емкости жесткого диска: общая емкость
+не может превышать 1 Гбайта (т.е. 2 жестких диска по 504 Мбайт).</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Интерфейс EIDE</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Интерфейс
+EIDE (Enhanced Integrated Drive Electronics) разработан компанией Western
+Digital с целью исключения ограничений по емкости жесткого диска. Компания
+Seagate Technology использует для подобного интерфейса собственные названия:
+Fast ATA, ATA-2, ATA-3, ATAPI.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Особенности
+интерфейса:</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; – использование
+накопителей емкостью более 504 Мбайт. На уровне BIOS поддерживаются накопители
+емкостью до 8,4 Гбайт. IDE распознает устройства емкостью до 136,9 Гбайт.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; – повышение
+производительности обмена данными. Скорость обмена в разных режимах достигает
+11...20 Мбайт/с.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; – расширение
+количества подключаемых устройств. За счет использования вторичного контроллера
+дисков к одному адаптеру можно подключить до 4 устройств со спецификациями
+Primary Master ("первичный управляющий"), Primary Slave ("первичный управляемый"),
+Secondary Master ("вторичный управляющий"), Secondary Slave ("вторичный
+управляемый").</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; – поддержка
+новых типов периферийных устройств. Интерфейс поддерживает CD-ROM, стример.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Сравнение SCSI и IDE</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>• Все системные платы на базе
+процессоров Pentium имеют встроенный интерфейс IDE, не уступающий по скорости
+SCSI.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>• АТА использует в основном
+программный ввод-вывод, SCSI передает данные по DMA. В однопользовательских
+системах программный ввод-вывод эффективнее, в многозадачных и многопользовательских
+системах преимущество за SCSI.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>• SCSI-устройства разных
+производителей "не знают друг друга", имеют разный набор команд, несовместимы
+или плохо совместимы.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>• Установка нового АТА-устройства
+проста, используется принцип PnP. SCSI при установке требует квалифицированной
+настройки, использует специальные драйверы адаптера и устройств.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>• SCSI обеспечивает подключение
+до 7 устройств, АТА — до 4.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>• С учетом стоимости для
+бытовых компьютеров выбирается EIDE, для более производительных, серверов
+и т. п. — преимущественно SCSI.</font></font>
+<br>
+
+<br>&nbsp;
+</body>
+</html>

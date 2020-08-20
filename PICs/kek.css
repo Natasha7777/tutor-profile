@@ -1,0 +1,24 @@
+A.links {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; VERTICAL-ALIGN: middle; COLOR: #4b4bb1; TEXT-DECORATION: none
+}
+A.links:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; VERTICAL-ALIGN: middle; COLOR: #4b4bb1; TEXT-DECORATION: none
+}
+A.links:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; VERTICAL-ALIGN: middle; COLOR: #4b4bb1; TEXT-DECORATION: underline
+}
+A.links_active {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; VERTICAL-ALIGN: middle; COLOR: #4b4bb1; TEXT-DECORATION: underline
+}
+A.info:link {
+	COLOR: #0058a4; TEXT-DECORATION: none
+}
+A.info:visited {
+	COLOR: #0058a4; TEXT-DECORATION: none
+}
+A.info:hover {
+	COLOR: #0058a4; TEXT-DECORATION: underline
+}
+A.info:active {
+	COLOR: #0058a4; TEXT-DECORATION: none
+}

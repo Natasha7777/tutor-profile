@@ -1,0 +1,119 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+   <meta name="GENERATOR" content="Mozilla/4.51 [ru] (Win95; I) [Netscape]">
+   <title>ports</title>
+<style>
+<!-- hide from old browsers
+!New Style! {}
+-->
+</style>
+</head>
+<body text="#000000" bgcolor="#EFEFEF" link="#0000EE" vlink="#000099" alink="#3333FF">
+
+<div ALIGN=right>
+<h1>
+<a NAME="top"></a><font face="Arial,Helvetica"><font color="#000000"><font size=+2>Порты
+ввода-вывода</font></font></font></h1></div>
+
+<hr WIDTH="100%">
+<center><img SRC="images/ports.jpeg" ALT="Порты ввода-вывода" NOSAVE height=109 width=250 align=TEXTTOP></center>
+<font size=-1></font>
+<p><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp; Присоединение
+стандартных периферийных устройств к персональному компьютеру производится
+через устройства сопряжения (адаптеры), на которых реализованы стандартные
+последовательный или параллельный интерфейсы — порты ввода-вывода. В качестве
+последовательного стандартного интерфейса используется RS-232C (Recomended
+Standard), в качестве параллельного — Cetronics.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Порт
+называется последовательным, когда информационные биты передаются последовательно
+один за другим; параллельным, когда несколько бит данных передаются одновременно,
+параллельно.</font></font>
+<br><font size=-1></font>&nbsp;
+<table CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+<td>
+<center><img SRC="images/p-com1.jpeg" ALT="порт COM1" NOSAVE height=87 width=117></center>
+</td>
+
+<td>
+<center><img SRC="images/p-com2.jpeg" ALT="порт COM2" NOSAVE height=87 width=200></center>
+</td>
+
+<td>
+<center><img SRC="images/p-lpt1.jpeg" ALT="порт LPT1" NOSAVE height=89 width=210></center>
+</td>
+</tr>
+
+<tr BGCOLOR="#CCCCCC">
+<td>
+<center><font face="Arial,Helvetica"><font size=-1>порт COM1</font></font></center>
+</td>
+
+<td>
+<center><font face="Arial,Helvetica"><font size=-1>порт COM2</font></font></center>
+</td>
+
+<td>
+<center><font face="Arial,Helvetica"><font size=-1>порт LPT1</font></font></center>
+</td>
+</tr>
+</table>
+
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Последовательный порт</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Последовательный
+порт (COM) используется для подключения удаленного принтера, мыши, внешнего
+модема и др. MS-DOS поддерживает до 4 последовательных портов с логическими
+именами COM1...COM4. Последовательный интерфейс передает данные последовательно
+по одному биту, с синхронизацией, основанной на паритете, четности и стоповых
+битах. Для передачи и приема в них используется два канала (один для передачи
+и один для приема) и несколько дополнительных сигнальных линий. Для подключения
+используется 9-контактный разъем DB-9 или 25-контактный DB-25. Максимальная
+длина кабеля — 30 м.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Базовая
+микросхема обеспечивает максимальную скорость передачи данных 115200 бит/с.
+Обмен через параллельный порт осуществляется на дискретных скоростях 2400,
+4800, 9600, 19200 бит/с с использованием стандартных встроенных средств
+BIOS. При специальном программировании можно достичь скорости 115200 и
+выше.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Параллельный порт</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Параллельный
+порт (LPT) используется для подключения принтера, плоттера, сканера. MS-DOS
+поддерживает максимум 3 параллельных порта с логическими именами LPT1,
+LPT2, LPT3. Он имеет восемь разрядов шины данных и способен передавать
+информацию байтами синхронно по восьми проводникам. Подсоединение кабеля
+к адаптеру интерфейса производится через 25-контактный разъем типа DB-25,
+имеющий 12 выходов и 5 входов. Со стороны принтера используется 36-контактный
+разъем типа Cetronics, имеющий 12 входов и 5 выходов. Остальные контакты
+служебные (система связи, питание +5 В, земля и др.). Максимальная длина
+соединительного кабеля — 3 м.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; При использовании
+матричного принтера скорость передачи данных не превышает 300 Кбайт/с.
+Для современных печатающих систем разработаны модификации скоростных интерфейсов
+EPP (Enhanced Parallel Port) и ECP (Extended Capabilities Port), обеспечивающие
+передачу данных до 2...5 Мбайт/с и двухстороннюю передачу.</font></font>
+<h5>
+<font face="Arial,Helvetica">Инфракрасный порт</font></h5>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Инфракрасный
+порт используется для связи портативных компьютеров с настольными, для
+подключения лазерных принтеров. Устройство порта включает светодиод, работающий
+в инфракрасном диапазоне, и фотоэлемент, принимающий и преобразующий свет
+в электрические сигналы. Технология предложена фирмой Hewlett Packard в
+1994 г.</font></font>
+<br><font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Преимущества
+порта — низкая цена и невысокое энергопотребление. Скорость передачи данных
+— до 115200 бит/с, расстояние — до 1 м, угод излучения — 30 градусов.</font></font>
+<h4>
+<font face="Arial,Helvetica"><font size=-1>Игровой порт (game-port)</font></font></h4>
+<font face="Arial,Helvetica"><font size=-1>&nbsp;&nbsp;&nbsp; Игровой порт
+используется для подключения джойстика. Он обычно расположен на звуковой
+карте, либо на многофункциональной плате ввода-вывода (Multi I/O Card).
+Адаптер принимает до 4 цифровых входов типа "ON-OFF" и до четырех аналоговых
+входов (изменение параметров).</font></font>
+<br>
+
+</body>
+</html>

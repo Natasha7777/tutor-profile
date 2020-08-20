@@ -1,0 +1,137 @@
+<html>
+<head>
+
+
+<TITLE>Першi кроки - Частина семнадцатая, как создавать таблицы.</TITLE>    
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+
+<table>
+	<tr>
+	<td width="600">
+
+<p align="JUSTIFY"><font face="times new roman">
+Долго ли, коротко ли, но мы добрались до таблиц. Я полагаю, что мой спутник работал в Word и сталкивался с таблицами уже. Если так, то вы должны уже знать, что таблицы нужны для форматирования текста, а порой и не заменимы.
+<br><br>
+Таблица задается тэгом:</font><br><br>
+<tt>&lt;table&gt;&lt;/table&gt;</tt><br><br>
+<font face="times new roman">
+
+Увы, это  далеко не все: таблица состоит из строк и столбцов (ячеек), поэтому нам надо еще и указать их.
+</font><br><br>
+<tt>&lt;tr&gt;&lt;/tr&gt; - строчка таблицы<br>
+&lt;td&gt;&lt;/td&gt; - столбец (ячейка) таблицы
+</tt>
+<font face="times new roman">
+<br>
+<img src="picsteps/tabliza41.gif">
+<br><br>
+Итак, перед вами таблица из двух строк и трех столбцов (ячеек). Для наглядности я выделила ячейки таблицы разными цветами. Границы таблицы не заданы, поэтому вы их не видите. Как же такая красота получилась? Итак следите за движениями моих рук:
+</font><br><br>
+<tt>
+&lt;table&gt;<br>
+<b>&lt;tr&gt;&lt;/tr&gt;</b><br>
+<b>&lt;tr&gt;&lt;/tr&gt;</b><br>
+&lt;/table&gt;
+</tt><br><br>
+
+<font face="times new roman">
+
+Сначала задаем строки. В нашем примере их две. Теперь в каждой строке зададим по три столбца (ячейки):
+</font>
+
+<br><br>
+<tt>
+&lt;table&gt;<br>
+&lt;tr&gt;<br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+<b>&lt;td&gt;&lt;/td&gt;</b><br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;
+</tt><br><br>
+
+<font face="times new roman">
+Мой вам совет, для начала рисуйте таблицу на листе бумаге, чтобы все наглядно видеть.<br><br>
+Итак, теперь нам надо заполнить получившийся каркас:
+</font>
+
+<br><br>
+<tt>
+&lt;table&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<b>1x1</b>&lt;/td&gt;<br>
+&lt;td&gt;<b>1x2</b>&lt;/td&gt;<br>
+&lt;td&gt;<b>1x3</b>&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td&gt;<b>2x1</b>&lt;/td&gt;<br>
+&lt;td&gt;<b>2x2</b>&lt;/td&gt;<br>
+&lt;td&gt;<b>2x3</b>&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;
+</tt><br><br>
+
+<font face="times new roman">
+Надеюсь мы поняли, что первая цифра в загадочных надписях - это номер ряда, а вторая номер столбца (1х2 - первый ряд, второй столбец и т.д). Это опять же вам для наглядности. Если посмотреть то, что уже у нас с вами получилось, то это будет выглядеть так:
+<br><br>
+<table>
+<tr>
+<td><center><font face="times new roman">1x1</font></center></td>
+<td><center><font face="times new roman">1x2</font></center></td>
+<td><center><font face="times new roman">1x3</font></center></td>
+</tr>
+<tr>
+<td><center><font face="times new roman">2x1</font></center></td>
+<td><center><font face="times new roman">2x2</font></center></td>
+<td><center><font face="times new roman">2x3</font></center></td>
+</tr>
+</table>
+<br>
+Увы, фона (голубенького или желтенького, как в примере) еще не видно. Фон задается параметром bgcolor="цвет_фона". Фон можно задать для таблицы в целом, для ряда, для столбца (в пределе одного ряда). В нашем случае мы задаем фон для каждого столбца.  
+</font>
+
+<br><br>
+<tt>
+&lt;table&gt;<br>
+&lt;tr&gt;<br>
+&lt;td <b>bgcolor="#FFCC33"</b>&gt;1x1&lt;/td&gt;<br>
+&lt;td <b>bgcolor="#336699"</b>&gt;1x2&lt;/td&gt;<br>
+&lt;td <b>bgcolor="#FFCC33"</b>&gt;1x3&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td <b>bgcolor="#336699"</b>&gt;2x1&lt;/td&gt;<br>
+&lt;td <b>bgcolor="#FFCC33"</b>&gt;2x2&lt;/td&gt;<br>
+&lt;td <b>bgcolor="#336699"</b>&gt;2x3&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;
+</tt><br><br>
+<font face="times new roman">
+Вот, что у нас получилось:
+
+<br><br>
+<img src="picsteps/tabliza21.gif"><br><br>
+Попробуйте задать фон для таблицы и для ряда (это для усвоения материала). Когда все усвоится переходите  к следущей ступеньке, и мы продолжим разговор о таблицах.
+
+</p>
+
+<center><a href="16step2.html">Назад</a> | <a href="18step2.html">Наступна частина</a></center></font>
+
+</td>
+
+	</tr>
+ </table>
+
+
+</body>
+</html>

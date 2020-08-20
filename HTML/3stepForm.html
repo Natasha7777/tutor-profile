@@ -1,0 +1,537 @@
+<html>
+<head>
+
+<TITLE>Перші кроки - Порція перша, інструментарій.</TITLE>      
+<META HTTP-EQUIV="Content-Type" Content="text/html; Charset=Windows-1251">
+<META NAME="description" CONTENT="Основи html для економiстiв">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="blink.css">
+
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000">
+
+<table>
+<tr><td width="600">
+<h4>Учебник по формам
+</h4>
+<b>Урок 3</b>
+<br><br>
+
+Перед тем, как мы продолжим,  хочу упомянуть еще об одной важной вещи. Вы можете использовать в формах различные изображения. И вообще, вы можете использовать в форме, что угодно, а форму в чем угодно. Только следите за правильностью html-кода и избегайте перекрывающих друг друга тегов.
+<br><br>
+<br>
+
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<CENTER>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=5>
+<CAPTION ALIGN=top><FONT SIZE=5><EM>Тест по политологии</EM></FONT></CAPTION>
+
+<TR>
+<TD ALIGN=center colspan="6"><div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px"> От каких партий балотировались эти президенты? Республиканской или демокрастической?
+</TD></TR>
+
+
+<TR>
+<TD ALIGN=center>
+<IMG SRC="formtutor/clinton.gif" WIDTH=86 HEIGHT=101 alt="Клинтон"><BR><INPUT NAME="Clinton" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Clinton" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/bush.gif" WIDTH=86 HEIGHT=101 alt="Буш"><BR><INPUT NAME="Bush" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Bush" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/reagan.gif" WIDTH=86 HEIGHT=101 alt="Рейган"><BR><INPUT NAME="Reagan" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Reagan" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/carter.gif" WIDTH=86 HEIGHT=101 alt="Картер"><BR><INPUT NAME="Carter" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Carter" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/ford.gif" WIDTH=86 HEIGHT=101 alt="Форд"><BR><INPUT NAME="Ford" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Ford" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/nixon.gif" WIDTH=86 HEIGHT=101 alt="Никсон"><BR><INPUT NAME="Nixon" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Nixon" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>&nbsp;<BR>
+</TD>
+</TR>
+
+
+
+<TR>
+<TD ALIGN=center>
+<IMG SRC="formtutor/johnson.gif" WIDTH=86 HEIGHT=101 alt="Джонсон"><BR><INPUT NAME="Johnson" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Johnson" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/kennedy.gif" WIDTH=86 HEIGHT=101 alt="Кеннеди"><BR><INPUT NAME="Kennedy" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Kennedy" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/eisenhow.gif" WIDTH=86 HEIGHT=101 alt="Эйзенхауер"><BR><INPUT NAME="Eisenhower" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Eisenhower" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/truman.gif" WIDTH=86 HEIGHT=101 alt="Труман"><BR><INPUT NAME="Truman" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Truman" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/fdr.gif" WIDTH=86 HEIGHT=101 alt="Рузвельт"><BR><INPUT NAME="Roosevelt" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Roosevelt" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+
+<TD ALIGN=center>
+<IMG SRC="formtutor/hoover.gif" WIDTH=86 HEIGHT=101 alt="Хувер"><BR><INPUT NAME="Hoover" TYPE=radio VALUE="Rep"><FONT SIZE=2>Рес</FONT><INPUT NAME="Hoover" TYPE=radio VALUE="Dem"><FONT SIZE=2>Дем</FONT><BR>
+</TD>
+</TR>
+
+</TABLE>
+</CENTER></FORM>
+
+<CENTER>Код этой формы &nbsp;<IMG SRC="arrow1.gif" WIDTH=12 HEIGHT=12>&nbsp;&nbsp; лежит&nbsp;&nbsp;<IMG SRC="arrow2.gif"  WIDTH=12 HEIGHT=12><A HREF="formtutorcode.html"> здесь </A>, если вам интересно.<BR>
+... а <EM>ответы на тест</EM> лежат <A HREF="formtutoranswers.html">тут</A>... для общего образования.<P></CENTER>
+<br><br>
+
+
+Перекрывающие друг друга теги. Наверняка вы удивились, что же я имел ввиду. Смотрите:
+
+</div><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<FONT COLOR="#008000">&nbsp;&nbsp;&nbsp;&lt;TABLE&gt;</FONT><FONT COLOR="#FF0000">&lt;FORM&gt;</FONT><FONT COLOR="#008000">&lt;/TABLE&gt;</FONT><FONT COLOR="#FF0000">&lt;/FORM&gt;</FONT></KBD>&nbsp;&nbsp;&nbsp;&nbsp;Перекрывающие друг друга теги... плохо<BR>
+<KBD>
+<FONT COLOR="#008000">&nbsp;&nbsp;&nbsp;&lt;TABLE&gt;</FONT><FONT COLOR="#FF0000">&lt;FORM&gt;&lt;/FORM&gt;</FONT><FONT COLOR="#008000">&lt;/TABLE&gt;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;А вот так правильно<BR>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+
+<i>Прим. переводчика: о порядке расположения тегов, о правильности их написания читайте <a href="3step2.html">в главе третьей учебника по html "Першi кроки"</a></i>.
+</div>
+<br><br>
+<font face="times new roman">
+Теперь мы поговорим о выпадающих списках (Pull Down List). Для этого вы вводим тег &lt;SELECT&gt; вместо &lt;INPUT&gt;. Тег &lt;SELECT&gt; в отличии от &lt;INPUT&gt; имеет закрывающий тег. Давайте введем его в наш документ.
+</font>
+
+<br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>&lt;SELECT&gt;<br>&lt;/SELECT&gt; </b><br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT>
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+
+<i>Примечание переводчика: конечно же не забываем обязательные html-теги (HTML, HEAD, TITLE, BODY) и тег для введения форм в документ (FORM) и его атрибуты.</i>
+</div>
+<br><br>
+<font face="times new roman">
+Не забудьте дать ему имя (NAME).
+      
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  <b>NAME="BEST FRIEND"</b>&gt;<br>&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT  NAME="BEST FRIEND">
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Теперь добавим несколько опций (пунктов):
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND"&gt;<br>
+<b>&lt;OPTION&gt;Эд<br>
+&lt;OPTION&gt;Рик<br>
+&lt;OPTION&gt;Том<br>
+&lt;OPTION&gt;Гвидо</b><br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND">
+<OPTION>Эд
+<OPTION>Рик
+<OPTION>Том
+<OPTION>Гвидо
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Зададим для каждой опции (OPTION) значение (VALUE):
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND"&gt;<br>
+&lt;OPTION <b>VALUE="Ed"</b>&gt;Эд<br>
+&lt;OPTION <b>VALUE="Rick"</b>&gt;Рик<br>
+&lt;OPTION <b>VALUE="Tom"</b>&gt;Том<br>
+&lt;OPTION <b>VALUE="Guido"</b>&gt;Гвидо<br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND">
+<OPTION VALUE="Ed">Эд
+<OPTION VALUE="Rick">Рик
+<OPTION VALUE="Tom">Том
+<OPTION VALUE="Guido">Гвидо
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+По умолчанию вначале списка отображается тот пункт (опция), который мы ввели первым.
+
+<br><br>
+Однако, мы можем сами установить, какой пункт (опцию) будет видеть наш посетитель первым в списке.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND"&gt;<br>
+&lt;OPTION VALUE="Ed"&gt;Эд<br>
+&lt;OPTION VALUE="Rick"&gt;Рик<br>
+&lt;OPTION VALUE="Tom" <b>SELECTED</b>&gt;Том<br>
+&lt;OPTION VALUE="Guido"&gt;Гвидо<br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND">
+<OPTION VALUE="Ed">Эд
+<OPTION VALUE="Rick">Рик
+<OPTION VALUE="Tom" SELECTED>Том
+<OPTION VALUE="Guido">Гвидо
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Кроме выпадающего списка есть еще и прокручивающийся список (Scrolling List), они весьма схожи. Но прежде, чем вводить прокручивающийся список мы добавим еще несколько пунктов в наш выпадающий список.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND"&gt;<br>
+&lt;OPTION VALUE="Ed"&gt;Эд<br>
+&lt;OPTION VALUE="Rick"&gt;Рик<br>
+&lt;OPTION VALUE="Tom"&gt;Том<br>
+&lt;OPTION VALUE="Guido"&gt;Гвидо<br>
+<b>&lt;OPTION VALUE="Horace"&gt;Горацио<br>
+&lt;OPTION VALUE="Reggie"&gt;Режди<br>
+&lt;OPTION VALUE="Myron"&gt;Мирон</b><br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND">
+<OPTION VALUE="Ed">Эд
+<OPTION VALUE="Rick">Рик
+<OPTION VALUE="Tom">Том
+<OPTION VALUE="Guido">Гвидо
+<OPTION VALUE="Horace">Горацио
+<OPTION VALUE="Reggie">Реджи
+<OPTION VALUE="Myron">Мирон
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Теперь мы превратим выпадающий список в прокручивающийся, добавив лишь один атрибут SIZE для тега &lt;SELECT&gt;.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND" <b>SIZE=4</b>&gt;<br>
+&lt;OPTION VALUE="Ed"&gt;Эд<br>
+&lt;OPTION VALUE="Rick"&gt;Рик<br>
+&lt;OPTION VALUE="Tom"&gt;Том<br>
+&lt;OPTION VALUE="Guido"&gt;Гвидо<br>
+&lt;OPTION VALUE="Horace"&gt;Горацио<br>
+&lt;OPTION VALUE="Reggie"&gt;Режди<br>
+&lt;OPTION VALUE="Myron"&gt;Мирон<br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND" SIZE=4>
+<OPTION VALUE="Ed">Эд
+<OPTION VALUE="Rick">Рик
+<OPTION VALUE="Tom">Том
+<OPTION VALUE="Guido">Гвидо
+<OPTION VALUE="Horace">Горацио
+<OPTION VALUE="Reggie">Реджи
+<OPTION VALUE="Myron">Мирон
+</SELECT></FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+SIZE указывает сколько пунктов (опций) должно быть видно в окошке. Все очень просто.
+<br><br>
+
+И, конечно же, для прокручивающихся списков мы тоже можем установить сами, какой пункт должен быть выбран.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;SELECT  NAME="BEST FRIEND"&gt;<br>
+&lt;OPTION VALUE="Ed"&gt;Эд<br>
+&lt;OPTION VALUE="Rick"&gt;Рик<br>
+&lt;OPTION VALUE="Tom" <b>SELECTED</b>&gt;Том<br>
+&lt;OPTION VALUE="Guido"&gt;Гвидо<br>
+&lt;OPTION VALUE="Horace"&gt;Горацио<br>
+&lt;OPTION VALUE="Reggie"&gt;Режди<br>
+&lt;OPTION VALUE="Myron"&gt;Мирон<br>
+&lt;/SELECT&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<SELECT NAME="BEST FRIEND" SIZE=4>
+<OPTION VALUE="Ed">Эд
+<OPTION VALUE="Rick">Рик
+<OPTION VALUE="Tom" SELECTED>Том
+<OPTION VALUE="Guido">Гвидо
+<OPTION VALUE="Horace">Горацио
+<OPTION VALUE="Reggie">Реджи
+<OPTION VALUE="Myron">Мирон
+</SELECT>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+Вообще-то, я ума не приложу зачем нужна эта возможность (SELECTED) для прокручивающегося списка, однако, я чувствую острую необходимость зачем-то вам рассказывать о всякой возможности, в том числе и этой. <IMG SRC="formtutor/smile.gif" WIDTH=20 HEIGHT=12>
+
+<br><br>
+Кроме изученных нами полей существует еще одно очень полезное поле &lt;TEXTAREA&gt; - поле для ввода комментариев, нескольких строк какого-либо текста.
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<b>&lt;TEXTAREA NAME="COMMENTS"&gt;<br>
+&lt;/TEXTAREA&gt; </b><br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS">
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Мы можем контролировать размер этого поля.
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;TEXTAREA NAME="COMMENTS" <b>ROWS=6 COLS=50</b>&gt;<br>
+&lt;/TEXTAREA&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS" ROWS=6 COLS=50>
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+ROWS - высота поля (количество строк текста), COLS - ширина поля (количество печатных символов в одной строке).
+                             
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS" ROWS=15 COLS=65>
+
+                            \\|// 
+                            (@ @)   
+ ----------------------oOO---(_)---OOo-------------------------
+ :                                                            :
+ : Это наглядно иллюстрирует, что, если вы напечатаете что-то :
+ :       между тегами TEXTAREA, то это будет отображено,      : 
+ :                как комментарий по умолчанию.               :
+ :                                                            : 
+ :                 И самое прикольное в этом,                 :
+ :        что вы можете напечатать, ВСЁ, ЧТО ХОТИТЕ!          :
+ --------------------------------------------------------------
+                           |__|__|  
+                            || ||
+                           ooO Ooo
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+Html-код для этой формы&nbsp;<IMG SRC="arrow1.gif" WIDTH=12 HEIGHT=12> можно посмотреть&nbsp;<IMG SRC="arrow2.gif"  WIDTH=12 HEIGHT=12> <A HREF="formtutortextarea.html">здесь</A>.
+<br><br>
+Для &lt;TEXTAREA&gt; есть очень хороший атрибут WRAP. Некоторые броузеры его не понимают, но это ничего страшного, в этом случае они его проигнорируют, что не повлияет на работоспособность формы.
+<br><br>
+Введем его:
+
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 <b>WRAP=VIRTUAL</b>&gt;<br>
+&lt;/TEXTAREA&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 WRAP=VIRTUAL>
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+
+WRAP=VIRTUAL обозначает, что текст в поле формы будет автоматически переноситься на другую строку, когда ваш посетитель будет что-то печатать в поле формы, однако, данные из формы к вам придут ввиде одной большой строки (без переносов).
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 <b>WRAP=PHYSICAL</b>&gt;<br>
+&lt;/TEXTAREA&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 WRAP=PHYSICAL>
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman"> 
+
+WRAP=PHYSICAL обозначает, что текст будет переноситься на другую строку не только, когда ваш посетитель печатает его в поле формы, текст в таком  же отформатированном виде придет к вам (на почту, допустим). 
+
+</font><br><br>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td width="20" background="bg2.gif">&nbsp;</td>
+<td width="7" background="bgw.gif">&nbsp;</td>
+<td background="bgw.gif">
+<div style="FONT-FAMILY: verdana, geneva, arial, sans-serif; FONT-SIZE: 12px; LINE-HEIGHT: 16px">
+<tt>
+&lt;TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 <b>WRAP=OFF</b>&gt;<br>
+&lt;/TEXTAREA&gt;<br><br>
+<FORM METHOD=POST ACTION="http:///xxx@xxx.xxx"  ENCTYPE="application/x-www-form-urlencoded">
+<TEXTAREA NAME="COMMENTS" ROWS=3 COLS=30 WRAP=OFF>
+</TEXTAREA>
+</FORM>
+</tt>
+</td>
+</tr>
+</table><br><br>
+<font face="times new roman">
+WRAP=OFF  -  это значение стоит по умолчанию.
+
+<br><br>
+WRAP=OFF - обозначает, что текст в поле формы автоматически не переносится на другую строку (если пользователь сам не перенесет его посредством нажатия кнопки ENTER), кроме того, текст из формы посылается вам в таком виде, как он был напечатан вашим посетителем в поле формы со всеми пробелами и переносами строки (см. форму с человечком).
+
+
+<br><br>
+
+<center><a href="2stepForm.html">Назад</a> | <a href="4stepForm.html">Наступна частина</a></center></font>
+</td></tr></table>
+</body>
+</html>
